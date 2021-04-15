@@ -1,9 +1,9 @@
 //Variable List
 variable "accessKey" {
-     default = "<PUT IN YOUR AWS ACCESS KEY>"
+     default = "<ACCESS KEY>"
 }
 variable "secretKey" {
-     default = "<PUT IN YOUR AWS SECRET KEY>"
+     default = "<SECRET KEY>"
 }
 variable "region" {
      default = "us-east-1"
