@@ -2,6 +2,11 @@
 
 #update .bash_profile
 
+if !  [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Running as root! Don't use sudo!"
+    exit
+fi
+
 printf "Checking to see if git is installed...\n"
 
 if ! command -v git >/dev/null; then
@@ -11,8 +16,6 @@ fi
 
 printf "Cloning repository...\n"
 git clone https://github.com/AnthonyRubiano/Dotfiles.git /tmp/Dotfiles
-mv /tmp/Dotfiles/.bash_profile ~/.bash_profile
-
 printf "Cleaning up...\n"
 rm -rf /tmp/Dotfiles
 
