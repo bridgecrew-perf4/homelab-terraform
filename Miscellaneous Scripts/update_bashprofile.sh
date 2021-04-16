@@ -15,6 +15,8 @@ fi
 
 printf "Cloning repository...\n"
 git clone https://github.com/AnthonyRubiano/Dotfiles.git /tmp/Dotfiles
+printf "Moving files...\n"
+mv /tmp/Dotfiles/.bash_profile ~/.bash_profile
 printf "Cleaning up...\n"
 rm -rf /tmp/Dotfiles
 
