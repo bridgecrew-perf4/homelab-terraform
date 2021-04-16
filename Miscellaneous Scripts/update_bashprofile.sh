@@ -1,9 +1,8 @@
 #!/bin/bash
 
-#update .bash_profile
-
-if !  [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Running as root! Don't use sudo!"
+#Check to see if root
+if [[ $(/usr/bin/id -u) -eq 0 ]]; then
+    echo "Running as root, don't use sudo!"
     exit
 fi
 
