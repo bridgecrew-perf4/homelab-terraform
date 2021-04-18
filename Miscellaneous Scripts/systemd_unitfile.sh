@@ -42,6 +42,6 @@ ExecStop=$stopexec
 WantedBy=multi-user.target
 EOF
 
-printf "Your systemd unit file has been created in /etc/systemd/system with the name you specified.\n"
+printf "Your systemd unit file has been created in /etc/systemd/system/$filename.\n"
 
 exit
