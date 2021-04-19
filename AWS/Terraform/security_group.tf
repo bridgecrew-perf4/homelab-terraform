@@ -26,7 +26,7 @@ resource "aws_default_security_group" "default" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "Default"
   }
 }
 
