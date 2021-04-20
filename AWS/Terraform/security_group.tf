@@ -7,7 +7,7 @@ resource "aws_default_security_group" "default" {
     from_port       = 22
     to_port         = 22
     protocol        = "tcp"
-    security_groups = [""]
+    security_groups = ["aws_security_group.OpenVPN.id"]
   }
 
   ingress {
@@ -15,7 +15,7 @@ resource "aws_default_security_group" "default" {
     from_port   = 7
     to_port     = 7
     protocol    = "tcp"
-    security_groups = ""
+    security_groups = ["aws_security_group.OpenVPN.id"]
   }
 
   egress {
