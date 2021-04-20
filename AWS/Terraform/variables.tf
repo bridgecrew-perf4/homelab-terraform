@@ -20,6 +20,3 @@ variable "privateSubnetCIDRblock" {
 variable "publicSubnetCIDRblock" {
     default = "10.200.100.0/24"
 }
-variable "security_group_id" {
-
-}
