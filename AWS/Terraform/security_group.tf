@@ -48,6 +48,11 @@ resource "aws_security_group" "openvpn" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  
+ tags = {
+    Name = "OpenVPN"
+  }
+}
 
 //Nat Gateway Security Group
 resource "aws_security_group" "nat gateway" {
@@ -100,5 +105,8 @@ resource "aws_security_group" "nat gateway" {
     protocol        = "tcp"
     cidr_blocks     = ["0.0.0.0/0"]
   }
-
+  
+ tags = {
+    Name = "NAT Instance"
+  }
 }
