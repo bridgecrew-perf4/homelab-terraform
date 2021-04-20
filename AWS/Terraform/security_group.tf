@@ -35,10 +35,10 @@ resource "aws_security_group" "OpenVPN" {
   vpc_id      = aws_vpc.rubi-vpc.id
 
   ingress {
-    description     = "SSH"
-    from_port       = 22
-    to_port         = 22
-    protocol        = "tcp"
+    description     = "OpenVPN"
+    from_port       = 1194
+    to_port         = 1194
+    protocol        = "udp"
     }
 
 
