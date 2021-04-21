@@ -32,7 +32,7 @@ resource "aws_instance" "BookStack" {
 }
 
 //Valheim
-resource "aws_instance" "BookStack" {
+resource "aws_instance" "Valheim" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t3.medium"
 
