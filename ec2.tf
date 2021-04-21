@@ -1,6 +1,6 @@
 //OpenVPN EC2 Instance
 resource "aws_instance" "OpenVPN" {
-  ami           = "ami-0742b4e673072066f"
+  ami           = "ami-059f1cc52e6c85908"
   instance_type = "t2.micro"
 
   tags = {
@@ -16,6 +16,28 @@ resource "aws_instance" "NAT Gateway" {
 
   tags = {
     Name   = "NAT Gateway"
+    Access = "Public"
+  }
+}
+
+//BookStack
+resource "aws_instance" "BookStack" {
+  ami           = "ami-042e8287309f5df03"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name   = "BookStack"
+    Access = "Public"
+  }
+}
+
+//Valheim
+resource "aws_instance" "BookStack" {
+  ami           = "ami-059f1cc52e6c85908"
+  instance_type = "t3.medium"
+
+  tags = {
+    Name   = "Valheim"
     Access = "Public"
   }
 }
