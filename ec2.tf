@@ -1,4 +1,4 @@
-//OpenVPN EC2 Instance
+//OpenVPN
 resource "aws_instance" "OpenVPN" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t2.micro"
