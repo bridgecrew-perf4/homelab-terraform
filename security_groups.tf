@@ -1,6 +1,5 @@
 //Deafult Security Group
 resource "aws_default_security_group" "default" {
-  description = "default VPC security group"
   vpc_id      = aws_vpc.rubi-vpc.id
 
   ingress {
@@ -57,7 +56,7 @@ resource "aws_security_group" "openvpn" {
 }
 
 //Nat Gateway Security Group
-resource "aws_security_group" "nat gateway" {
+resource "aws_security_group" "nat-gateway" {
   description = "NAT Gateway"
   vpc_id      = aws_vpc.rubi-vpc.id
 
@@ -110,6 +109,6 @@ resource "aws_security_group" "nat gateway" {
   }
 
   tags = {
-    Name = "NAT Instance"
+    Name = "NAT Gateway"
   }
 }
