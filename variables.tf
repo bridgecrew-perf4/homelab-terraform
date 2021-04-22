@@ -20,3 +20,15 @@ variable "privateSubnetCIDRblock" {
 variable "publicSubnetCIDRblock" {
   default = "10.200.100.0/24"
 }
+variable "openvpnInternalIPAddress" {
+  default = "10.200.100.6"
+}
+variable "natgatewayInternalIPAddress" {
+  default = "	10.200.100.250"
+}
+variable "bookstackInternalIPAddress" {
+  default = "10.200.1.8"
+}
+variable "valheimInternalIPAddress" {
+  default = "10.200.100.10"
+}

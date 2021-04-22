@@ -1,4 +1,4 @@
-//OpenVPN
+//OpenVPN EC2 Instance
 resource "aws_instance" "OpenVPN" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t2.micro"
@@ -9,7 +9,7 @@ resource "aws_instance" "OpenVPN" {
   }
 }
 
-//NAT Gateway
+//NAT Gateway EC2 Instance
 resource "aws_instance" "NAT Gateway" {
   ami           = "ami-00a9d4a05375b2763"
   instance_type = "t2.micro"
@@ -20,7 +20,7 @@ resource "aws_instance" "NAT Gateway" {
   }
 }
 
-//BookStack
+//BookStack EC2 Instance
 resource "aws_instance" "BookStack" {
   ami           = "ami-042e8287309f5df03"
   instance_type = "t2.micro"
@@ -31,7 +31,7 @@ resource "aws_instance" "BookStack" {
   }
 }
 
-//Valheim
+//Valheim EC2 Instance
 resource "aws_instance" "Valheim" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t3.medium"
