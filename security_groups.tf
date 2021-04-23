@@ -112,3 +112,5 @@ resource "aws_security_group" "nat-gateway" {
     Name = "NAT Gateway"
   }
 }
+
+//TODO Add remaining SGs
