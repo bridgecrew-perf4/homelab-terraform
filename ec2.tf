@@ -2,6 +2,7 @@
 resource "aws_instance" "OpenVPN" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t2.micro"
+  disable_api_termination = true
 
   tags = {
     Name   = "OpenVPN"
@@ -13,6 +14,7 @@ resource "aws_instance" "OpenVPN" {
 resource "aws_instance" "NAT-Gateway" {
   ami           = "ami-00a9d4a05375b2763"
   instance_type = "t2.micro"
+  disable_api_termination = true
 
   tags = {
     Name   = "NAT Gateway"
@@ -24,6 +26,7 @@ resource "aws_instance" "NAT-Gateway" {
 resource "aws_instance" "BookStack" {
   ami           = "ami-042e8287309f5df03"
   instance_type = "t2.micro"
+  disable_api_termination = true
 
   tags = {
     Name   = "BookStack"
@@ -35,6 +38,7 @@ resource "aws_instance" "BookStack" {
 resource "aws_instance" "Valheim" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t3.medium"
+  disable_api_termination = true
 
   tags = {
     Name   = "Valheim"
