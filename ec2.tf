@@ -1,5 +1,5 @@
 //OpenVPN EC2 Instance
-resource "aws_instance" "OpenVPN" {
+resource "aws_instance" "openvpn" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t2.micro"
   disable_api_termination = true
@@ -11,7 +11,7 @@ resource "aws_instance" "OpenVPN" {
 }
 
 //NAT Gateway EC2 Instance
-resource "aws_instance" "NAT-Gateway" {
+resource "aws_instance" "nat-gateway" {
   ami           = "ami-00a9d4a05375b2763"
   instance_type = "t2.micro"
   disable_api_termination = true
@@ -23,7 +23,7 @@ resource "aws_instance" "NAT-Gateway" {
 }
 
 //BookStack EC2 Instance
-resource "aws_instance" "BookStack" {
+resource "aws_instance" "bookstack" {
   ami           = "ami-042e8287309f5df03"
   instance_type = "t2.micro"
   disable_api_termination = true
@@ -35,7 +35,7 @@ resource "aws_instance" "BookStack" {
 }
 
 //Valheim EC2 Instance
-resource "aws_instance" "Valheim" {
+resource "aws_instance" "valheim" {
   ami           = "ami-059f1cc52e6c85908"
   instance_type = "t3.medium"
   disable_api_termination = true
