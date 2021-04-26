@@ -155,7 +155,7 @@ resource "aws_security_group" "valheim" {
     description = "Valheim"
     from_port   = 2456
     to_port     = 2456
-    protocol    = "tcp"
+    protocol    = "udp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
@@ -163,7 +163,7 @@ resource "aws_security_group" "valheim" {
     description = "Valheim"
     from_port   = 2457
     to_port     = 2457
-    protocol    = "tcp"
+    protocol    = "udp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
@@ -171,7 +171,7 @@ resource "aws_security_group" "valheim" {
     description = "Valheim"
     from_port   = 2458
     to_port     = 2458
-    protocol    = "tcp"
+    protocol    = "udp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
