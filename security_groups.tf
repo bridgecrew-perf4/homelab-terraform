@@ -145,3 +145,44 @@ resource "aws_security_group" "bookstack" {
     Name = "BookStack"
   }
 }
+
+//Valheim Security Group
+resource "aws_security_group" "valheim" {
+  description = "Valheim"
+  vpc_id      = aws_vpc.rubi-vpc.id
+
+  ingress {
+    description = "Valheim"
+    from_port   = 2456
+    to_port     = 2456
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "Valheim"
+    from_port   = 2457
+    to_port     = 2457
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "Valheim"
+    from_port   = 2458
+    to_port     = 2458
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "Valheim"
+  }
+}
