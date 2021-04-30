@@ -44,6 +44,7 @@ resource "aws_security_group" "openvpn" {
   }
 
   egress {
+    description = "OpenVPN"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
