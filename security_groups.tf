@@ -1,4 +1,4 @@
-//Deafult Security Group
+//Deafult Security Group - Ingress allowed for Ping/SSH only from internal network
 resource "aws_default_security_group" "default" {
   vpc_id      = aws_vpc.rubi-vpc.id
 
