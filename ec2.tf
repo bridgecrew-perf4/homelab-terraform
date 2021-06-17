@@ -24,19 +24,6 @@ resource "aws_instance" "nat-gateway" {
   }
 }
 
-//BookStack EC2 Instance
-resource "aws_instance" "bookstack" {
-  ami           = "ami-042e8287309f5df03"
-  instance_type = "t2.micro"
-  security_groups = [aws_default_security_group.default.id, aws_security_group.bookstack.id]
-  disable_api_termination = true
-
-  tags = {
-    Name   = "BookStack"
-    Access = "Public"
-  }
-}
-
 //Valheim EC2 Instance
 resource "aws_instance" "valheim" {
   ami           = "ami-059f1cc52e6c85908"

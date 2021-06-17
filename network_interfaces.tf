@@ -18,16 +18,6 @@ resource "aws_network_interface" "nat-gateway" {
   }
 }
 
-//BookStack Network Interface
-resource "aws_network_interface" "bookstack" {
-  subnet_id   = aws_subnet.rubi-private-subnet.id
-  private_ips = [var.bookstackInternalIPAddress]
-
-  tags = {
-    Name = "BookStack"
-  }
-}
-
 //Valheim Network Interface
 resource "aws_network_interface" "valheim" {
   subnet_id   = aws_subnet.rubi-public-subnet.id
